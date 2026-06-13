@@ -5,25 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deserve</title>
     <link rel="stylesheet" href="myStyle.css">
-    
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <h2>Salam School</h2>
 
-        </div>
-        <nav class="navbar">
-            <ul>
+<header class="header">
+
+    <div class="logo">
+        <h2>Salam School</h2>
+    </div>
+
+    <nav class="navbar">
+        <ul id="navLinks">
             <li><a href="#">Home</a></li>
-            <li> <a href="#">About</a></li>
-            <li><a href="#">Contact Us </a></li>
-            <li> <a href="#">Service </a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Service</a></li>
         </ul>
 
-        </nav>
-        
-        
-    </header>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+</header>
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        hamburger.classList.toggle("open");
+    });
+</script>
+
 </body>
 </html>
